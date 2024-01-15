@@ -1,0 +1,88 @@
+**RAM- random access mechine
+steps stored in RAM memory:
+
+1)conditional staements
+2)arthmetic operations
+3)initialization
+
+example: a[1]=a[2]+a[4]
+it will be stored in two steps
+
+**2D array mapping
+**RAM model
+
+--time complexity
+
+**Big O notation: 
+**asymptotic notation: asymptotic notations are mathematical tootls that allow
+  you to analyse an algorithm running time by identifying its behaviour as its inout isze grows.
+
+--theta(average)  , theta(N/2) but as we ignore the constants so we will write as theta(N)
+--big O(worst)    , O(N) when element is found at the last place
+--pi(best)        , pi(1) when element is found at first step
+  *rules to wirte time complexity:
+    ignore constants
+    consider the highest power
+
+f & g - non negative functions with non negative arguments
+   learn mathematical graph for time complexity for best,worst,average case 
+   learn mathematical definitions for time complexity for best, worst, average case
+   time complexity will always > 0 it can not be nagative
+
+mcq questions on how many itrations in the loops for for loop and while loop
+example 1:
+for(int=0 ; i<n ; i*=2){
+    value++;
+}
+ by using log properties
+  time complexity for this is: O(log2N)
+
+example 2:
+for(int i=1 ; i<n/2 ; i++){
+    for(int j=1 ; j+n/2 < n ; j++){
+        for(int k=1; k<n ; k*=2){
+            value++;
+        }
+    }
+}
+ans:
+The outer loop: for(int i=1; i<n/2; i++)
+This loop will iterate  N/2 − 1 times. The loop starts with i=1 and continues until i is no longer less than n/2.
+
+The middle loop: for(int j=1; j+n/2 < n; j++)
+
+The loop condition is j+n/2<n. The loop will iterate n- 3n/2 +1 times. It starts with j=1 and continues until 
+j+ n/2 is equal to or greater than n.
+
+The inner loop: for(int k=1; k<n; k*=2)
+
+This loop will iterate until k becomes greated than or equal to n. the numbber of itrations 
+is determined by the logorithmi base 2 to n : 
+[log2n]
+Now, to find the total number of iterations, you multiply the number of iterations of each loop:
+   (n/2 - 1) * (n - 3n/2+1) * [log2n]
+
+
+example 3:
+int i=1;
+while(i<n){
+    int j = n;
+    while(j>0){
+        value++;
+        j/=2
+    }
+    i*=2;
+}
+
+ans: [log2n]*[log2n] =  [log2n]^2 times .
+
+**time complexity for binary search algorithm
+with diagram 
+
+
+ques:
+for(int i=0; i*i<n ; i++){
+    value++;
+}
+
+time complexity for this is 
